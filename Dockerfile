@@ -5,7 +5,8 @@ RUN apk --update add git less openssh curl wget bash bash-completion && \
     rm /var/cache/apk/* && \
     mkdir -p /root/.ssh && \
     chmod 700 /root/.ssh && \
-    sed -e 's;/bin/ash$;/bin/bash;g' -i /etc/passwd
+    sed -e 's;/bin/ash$;/bin/bash;g' -i /etc/passwd && \
+    echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 VOLUME /git
 VOLUME /root
