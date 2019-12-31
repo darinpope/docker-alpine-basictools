@@ -5,4 +5,6 @@ RUN apk --update add git less openssh curl wget && \
     rm /var/cache/apk/*
 
 VOLUME /git
+VOLUME /root
+
 WORKDIR /git
