@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM openjdk:8-jdk-alpine
 
 RUN apk --update add git less openssh curl wget bash bash-completion && \
     rm -rf /var/lib/apt/lists/* && \
