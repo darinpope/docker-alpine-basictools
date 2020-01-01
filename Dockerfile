@@ -7,7 +7,7 @@ RUN apk --update add git less openssh curl wget bash bash-completion && \
     chmod 700 /root/.ssh && \
     sed -e 's;/bin/ash$;/bin/bash;g' -i /etc/passwd && \
     echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config && \
-    mkdir -p /root/downloads
+    mkdir -p /root/downloads/maven
 
 VOLUME /git
 VOLUME /root
